@@ -1,0 +1,185 @@
+.site-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 40px;
+}
+
+/* Logó bal oldalon */
+.logo-placeholder {
+  width: 150px;
+  height: 60px;
+  background-color: #ddd;
+  flex-shrink: 0;
+}
+
+/* Navigáció jobb oldalon */
+.site-header nav {
+  margin-left: auto;
+}
+
+.menu {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.menu a {
+  text-decoration: none;
+  color: #333;
+  font-size: 16px;
+  transition: color 0.3s ease;
+}
+
+.menu a:hover {
+  color: #007bff;
+}
+
+/* Alapbeállítások */
+* {
+  box-sizing: border-box;
+}
+
+main {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* HEADER - felül */
+.hero {
+  width: 100%;
+  padding: 30px;
+  margin-bottom: 25px;
+  background-color: #e8eef5;
+  border-radius: 10px;
+}
+
+/* ARTICLE és ASIDE egymás mellett */
+.content-layout {
+  display: flex;
+  align-items: flex-start;
+  gap: 25px;
+}
+
+/* ARTICLE bal oldalon */
+.main-content {
+  flex: 3;
+  min-width: 0;
+}
+
+/* ASIDE jobb oldalon */
+aside {
+  flex: 1;
+  min-width: 220px;
+  padding: 20px;
+  background-color: #f3f3f3;
+  border-radius: 10px;
+}
+
+/* KÁRTYÁK - két oszlop */
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+/* Egy kártya */
+.card {
+  flex: 1 1 calc(50% - 10px);
+  min-width: 200px;
+  overflow: hidden;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  background-color: #fff;
+}
+
+/* Kép helye */
+.image-placeholder {
+  width: 100%;
+  height: 180px;
+  background-color: #e0e0e0;
+  overflow: hidden;
+}
+
+.image-placeholder img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Kártya tartalma */
+.card-content {
+  padding: 15px;
+}
+
+.card-content h3 {
+  margin-top: 0;
+}
+
+.card-content a {
+  display: inline-block;
+  margin-top: 10px;
+  color: #0066cc;
+  text-decoration: none;
+}
+
+.card-content a:hover {
+  text-decoration: underline;
+}
+
+/* ASIDE dobozai */
+.aside-box {
+  margin-bottom: 15px;
+  padding: 15px;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+}
+
+/* Reszponzív elrendezés */
+@media (max-width: 700px) {
+  .content-layout {
+    flex-direction: column;
+  }
+
+  .main-content,
+  aside {
+    width: 100%;
+  }
+
+  .card {
+    flex-basis: 100%;
+  }
+}
+
+footer {
+  margin-top: 40px;
+  padding: 25px;
+  background-color: #fff;
+  color: #333;
+  text-align: left;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}
+
+footer p {
+  margin: 0 0 10px;
+  font-size: 15px;
+  line-height: 1.6;
+  color: #333;
+}
+
+footer p:last-of-type {
+  margin-bottom: 0;
+}
+
+@media (max-width: 600px) {
+  footer {
+    padding: 18px;
+  }
+}
